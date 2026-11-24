@@ -1,0 +1,150 @@
+@import "tailwindcss";
+
+@layer base {
+  html,
+  body,
+  #root {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #070b14;
+    color: #f4efe6;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: none;
+  }
+}
+
+.font-display {
+  font-family: 'Chakra Petch', system-ui, sans-serif;
+}
+
+.font-mono-num {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Minecraft-style 3D Beveled Pixel-Block UI System */
+.mc-panel {
+  border-radius: 2px;
+  border: 2px solid #09090b;
+  background-color: rgba(24, 24, 27, 0.92);
+  box-shadow:
+    inset 2px 2px 0 rgba(255, 255, 255, 0.16),
+    inset -2px -2px 0 rgba(0, 0, 0, 0.7),
+    0 4px 0 rgba(0, 0, 0, 0.72);
+}
+
+.mc-panel-stone {
+  border-radius: 2px;
+  border: 2px solid #09090b;
+  background-color: #2c2c30;
+  box-shadow:
+    inset 2px 2px 0 rgba(255, 255, 255, 0.22),
+    inset -2px -2px 0 rgba(0, 0, 0, 0.65),
+    0 4px 0 #09090b;
+}
+
+.mc-slot {
+  border-radius: 2px;
+  border: 2px solid #09090b;
+  background-color: rgba(16, 16, 20, 0.88);
+  box-shadow:
+    inset 2px 2px 0 rgba(0, 0, 0, 0.78),
+    inset -2px -2px 0 rgba(255, 255, 255, 0.14);
+}
+
+.mc-btn {
+  border-radius: 2px;
+  border: 2px solid #09090b;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.78);
+  box-shadow:
+    inset 2px 2px 0 rgba(255, 255, 255, 0.36),
+    inset -2px -3px 0 rgba(0, 0, 0, 0.48),
+    0 3px 0 #09090b;
+  transition: transform 60ms ease, filter 80ms ease;
+}
+
+.mc-btn:hover:not(:disabled) {
+  filter: brightness(1.09);
+}
+
+.mc-btn:active:not(:disabled) {
+  transform: translateY(2px);
+  box-shadow:
+    inset 2px 2px 0 rgba(0, 0, 0, 0.45),
+    inset -2px -2px 0 rgba(255, 255, 255, 0.22),
+    0 1px 0 #09090b;
+}
+
+.mc-btn:disabled {
+  opacity: 0.45;
+  filter: grayscale(0.35);
+}
+
+.mc-btn-stone {
+  background-color: #6b6b70;
+  color: #f8fafc;
+}
+
+.mc-btn-dark {
+  background-color: #3a3a40;
+  color: #f4efe6;
+}
+
+.mc-btn-green {
+  background-color: #3c8527;
+  color: #f8fafc;
+}
+
+.mc-btn-gold {
+  background-color: #d97706;
+  color: #fffbeb;
+}
+
+.mc-btn-diamond {
+  background-color: #0284c7;
+  color: #f0f9ff;
+}
+
+.mc-btn-red {
+  background-color: #b91c1c;
+  color: #fef2f2;
+}
+
+.mc-dpad-base {
+  border-radius: 3px;
+  border: 3px solid #09090b;
+  background-color: rgba(44, 44, 48, 0.92);
+  box-shadow:
+    inset 3px 3px 0 rgba(255, 255, 255, 0.24),
+    inset -3px -3px 0 rgba(0, 0, 0, 0.65),
+    0 5px 0 rgba(0, 0, 0, 0.78);
+}
+
+.mc-dpad-knob {
+  border-radius: 2px;
+  border: 2px solid #09090b;
+  background-color: #52a535;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8);
+  box-shadow:
+    inset 2px 2px 0 rgba(255, 255, 255, 0.45),
+    inset -2px -3px 0 rgba(0, 0, 0, 0.48),
+    0 3px 0 #09090b;
+}
+
+/* Mobile Portrait Auto-Rotate Prompt for Horizontal Gameplay */
+@media (max-width: 767px) and (orientation: portrait) {
+  .landscape-play-shell {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100vh;
+    height: 100vw;
+    transform: translate(-50%, -50%) rotate(90deg);
+    transform-origin: center center;
+  }
+}

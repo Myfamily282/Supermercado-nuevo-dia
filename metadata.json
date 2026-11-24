@@ -1,0 +1,6 @@
+{
+  "name": "Kiosco Ruta 157 — Frías",
+  "description": "Juego 3D modo historia en un kiosco aislado de la Ruta 157 en Frías, Santiago del Estero. Atendé clientes, cobrá pedidos con físicas reales en cada producto, organizá el inventario y preparate para lo que venga.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
